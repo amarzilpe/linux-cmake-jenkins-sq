@@ -24,7 +24,7 @@ pipeline {
                 sh '''
                   mkdir -p .sonar
                   curl -sSLo .sonar/build-wrapper-linux-x86.zip ${SONARQUBE_URL}/static/cpp/build-wrapper-linux-x86.zip 
-                  unzip -o .sonar/build-wrapper-linux-x86.zip -d .sonar/
+                  unzip -o /var/lib/jenkins/workspace/linux-cmake-jenkins-sq/.sonar/build-wrapper-linux-x86.zip -d .sonar/
                 '''
             }
         }
